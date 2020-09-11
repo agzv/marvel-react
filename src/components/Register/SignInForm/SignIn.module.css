@@ -1,0 +1,196 @@
+/* .Container {
+    position: relative;
+    min-height: calc(100vh - 48px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Container p {
+    margin: 1rem 0 0 0;
+}
+
+.SignInForm {
+    background: #f3f3f3;
+    width: 15rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.SignInForm input {
+    width: 80%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    font-size: .9rem;
+    position: relative;
+}
+
+.SignInForm input::placeholder {
+    color: rgba(0, 0, 0, .3);
+}
+
+.SignInForm input[type='text']:focus,
+.SignInForm input[type='password']:focus {
+    border: 2px solid orangered;
+}
+
+.Btn {
+    background: orangered;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 476px) {
+    .SignInForm {
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .SignInForm {
+        width: 30rem;
+    }
+} */
+.Container {
+    width: 100%;
+}
+
+.LoginForm {
+    width: 90%;
+    max-width: 560px;
+    background: #f1f1f1;
+    height: 380px;
+    padding: 40px 40px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.LoginForm h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Txtb {
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 30px 0;
+}
+
+.Txtb input {
+    font-size: 15px;
+    color: #333;
+    border: none;
+    width: 100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    height: 40px;
+}
+
+.TxtbSpan::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: all .5s linear;
+}
+
+.TxtbSpan::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(120deg, #3498db, #8e44ad);
+    transition: all .5s linear;
+}
+
+.FocusTxtbSpan::before {
+    top: -5px;
+}
+
+.FocusTxtbSpan2::after {
+    width: 100%;
+}
+
+.Logbtn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: .5rem;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(226, 37, 37, 1) 0%, rgba(211, 49, 49, 1) 82.8%);
+    background-size: 200%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: all .5s linear;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.Logbtn:hover {
+    background-position: right;
+}
+
+.BottomText {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.ErrorBox {
+    width: 90%;
+    max-width: 30rem;
+    height: 5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    color: rgba(226, 37, 37, 1);
+    font-size: .8rem;
+    margin-top: 1rem;
+}
+
+.ErrorBox p {
+    text-transform: capitalize;
+}
+
+@media screen and (min-width: 476px) {
+    .ErrorBox {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* @media screen and (min-width: 476px) {
+    .LoginForm {
+        width: 360px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .LoginForm {
+        width: 460px;
+    }
+} */

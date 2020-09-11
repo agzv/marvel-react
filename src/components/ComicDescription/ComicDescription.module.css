@@ -1,0 +1,88 @@
+.ComicDescription {
+    width: 90%;
+    max-width: 725px;
+    padding: .4rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    box-shadow: 0 5px 15px -5px #00000070;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ComicDescription:hover {
+    box-shadow: 0 5px 8px 5px #00000070;
+}
+
+.ComicDescription h1 {
+    font-size: .8rem;
+    margin-top: .5rem;
+}
+
+.BtnContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.favoriteBtn {
+    border: none;
+    background: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.closeBtn {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.ComicDescription img {
+    width: 80%;
+    border-radius: 1rem;
+}
+
+.ComicDescription p {
+    font-size: .6rem;
+    text-align: justify;
+    letter-spacing: 1px;
+    margin: 1rem 0;
+    max-width: 35rem;
+}
+
+.ComicDescription h3 {
+    font-size: 1rem;
+    margin: .5rem 0 0 0;
+}
+
+.Creators {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Creators p {
+    width: auto;
+    margin: .2rem;
+    font-size: .9rem;
+}
+
+@media screen and (min-width: 476px) {
+    .ComicDescription h1 {
+        font-size: 1rem;
+    }
+
+    .ComicDescription p {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .Creators p {
+        margin: .5rem;
+    }
+}

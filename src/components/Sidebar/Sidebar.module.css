@@ -1,0 +1,76 @@
+.Sidebar {
+    background: #D32F2F;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.Close {
+    height: 2.5rem;
+}
+
+.Open {
+    height: 14rem;
+}
+
+.SidebarHeeader {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ToggleBtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 1rem 0 0 0;
+    outline: none;
+}
+
+.SidebarHeeader h3 {
+    margin: 1rem 0 0 0;
+}
+
+.Sidebar p {
+    margin: 0 0 1rem 0;
+}
+
+.SideNav {
+    height: 15rem;
+    /* background: fuchsia; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.SideNav a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+    color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+    .Sidebar {
+        height: 100vh;
+        width: 10rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .ToggleBtn {
+        display: none;
+    }
+
+    .SidebarHeeader h3 {
+        margin: 0;
+    }
+}

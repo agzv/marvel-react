@@ -1,0 +1,41 @@
+.Card {
+    width: 15rem;
+    height: 20rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem;
+    box-shadow: 0 5px 15px -5px #00000070;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+}
+
+.Card:hover {
+    box-shadow: 0 5px 8px 5px #00000070;
+}
+
+.InfoContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.InfoContainer h1 {
+    font-size: 1rem;
+    color: orangered;
+}
+
+/* .ImageContainer {
+    width: 14.5rem;
+    height: 14.5rem;
+} */
+
+.ImageContainer img {
+    width: 100%;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}

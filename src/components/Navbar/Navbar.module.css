@@ -1,0 +1,70 @@
+.Navbar {
+    width: 100%;
+    display: grid;
+    align-content: space-between;
+    background-color: #D32F2F;
+    transition: all .5s ease-in-out;
+}
+
+.Close {
+    height: 2.5rem;
+}
+
+.Open {
+    height: 15rem;
+}
+
+.NavHeader {
+    height: 2.5rem;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    color: #fff;
+}
+
+.ToggleBtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    outline: none;
+    justify-self: flex-end;
+}
+
+.NavigationItems {
+    height: 13rem;
+    display: grid;
+    align-content: space-evenly;
+}
+
+/* .NavigationItem {
+    
+} */
+
+.Navbar a {
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 992px) {
+    .Navbar {
+        grid-template-columns: 14rem 1fr;
+        justify-items: flex-end;
+    }
+
+    .NavHeader {
+        grid-template-columns: 1fr;
+    }
+
+    .ToggleBtn {
+        display: none;
+    }
+
+    .NavigationItems {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        height: auto;
+    }
+}

@@ -1,0 +1,140 @@
+/* .SearchForm {
+    width: 14rem;
+    position: relative;
+    border: 2px solid orangered;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    display: flex;
+}
+
+.TextInput, .Btn {
+    padding: .5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: orangered;
+    letter-spacing: 1px;
+    font-size: .7rem;
+}
+
+.TextInput {
+    width: 70%;
+}
+
+.TextInput::placeholder {
+    color: orangered;
+}
+
+.Btn {
+    width: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-weight: bold;
+    background: orangered;
+    transition: all .4s ease-in-out;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: white;
+}
+
+.Btn:hover {
+    background: rgb(218, 15, 15);
+}
+
+@media screen and (min-width: 476px) {
+    .SearchForm {
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .SearchForm {
+        width: 28rem;
+    }
+} */
+
+.SearchBox {
+    background: #D32F2F;
+    height: 40px;
+    border-radius: 40px;
+    margin: 1rem 0;
+    width: 80%;
+    max-width: 500px;
+}
+
+.SearchBtn {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #D32F2F;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in;
+    cursor: pointer;
+    outline: none;
+}
+
+.Icon {
+    background: white;
+    color: #D32F2F;
+}
+
+.SearchTxt {
+    padding-left: 10px;
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: white;
+    font-size: 16px;
+    line-height: 40px;
+    transition: all .3s ease-in;
+    width: 80%;
+}
+
+.SearchTxt::placeholder {
+    color: rgba(255, 255, 255, .7);
+}
+
+@media screen and (min-width: 992px) {
+    .SearchBox {
+        background: #D32F2F;
+        height: 40px;
+        border-radius: 40px;
+        margin: 1rem 0;
+        width: auto;
+    }
+
+    .SearchBox:hover .SearchTxt {
+        width: 440px;
+        padding: 0 10px;
+    }
+
+    .SearchBox:hover .SearchBtn {
+        background: #D32F2F;
+    }
+
+    .SearchBox:hover .Icon {
+        background: #D32F2F;
+        color: #fff;
+    }
+
+    .SearchBtn {
+        background: #D32F2F;
+    }
+
+    .Icon {
+        background: #D32F2F;
+        color: #fff;
+    }
+
+    .SearchTxt {
+        width: 0;
+        padding: 0;
+    }
+}

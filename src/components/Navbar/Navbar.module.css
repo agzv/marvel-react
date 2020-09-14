@@ -4,6 +4,7 @@
     align-content: space-between;
     background-color: #D32F2F;
     transition: all .5s ease-in-out;
+    z-index: 100;
 }
 
 .Close {

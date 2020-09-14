@@ -5,9 +5,9 @@ const hash = '1763bf4f4ad4ac5686dec90a36723274'
 // '13291d7c6c54afe5a8768a20fc4c05ff5d806f54401af76a3c2caff0cd8c8b7e6eb0eaaa1'
 // 'http://gateway.marvel.com/v1/public/comics?ts=1&apikey=01af76a3c2caff0cd8c8b7e6eb0eaaa1&hash=1763bf4f4ad4ac5686dec90a36723274'
 
-const CHARACTERS_URL = `http://gateway.marvel.com/v1/public/characters?limit=100?ts=1&apikey=${publicKey}&hash=${hash}`;
+const CHARACTERS_URL = `https://gateway.marvel.com/v1/public/characters?limit=100?ts=1&apikey=${publicKey}&hash=${hash}`;
 
-const COMICS_URL = `http://gateway.marvel.com/v1/public/comics?ts=1&apikey=${publicKey}&hash=${hash}`;
+const COMICS_URL = `https://gateway.marvel.com/v1/public/comics?ts=1&apikey=${publicKey}&hash=${hash}`;
 
 
 
@@ -21,7 +21,7 @@ class ComicsModel {
     }
 
     static singleCharacter = async (characterId) => {
-        const singleCharacterURL = `http://gateway.marvel.com/v1/public/characters/${characterId}?ts=1&apikey=${publicKey}&hash=${hash}`
+        const singleCharacterURL = `https://gateway.marvel.com/v1/public/characters/${characterId}?ts=1&apikey=${publicKey}&hash=${hash}`
         return await fetch(singleCharacterURL).then(res => res.json())
     }
 
@@ -31,7 +31,7 @@ class ComicsModel {
     }
 
     static singleComic = async (characterId) => {
-        const singleComicURL = `http://gateway.marvel.com/v1/public/comics/${characterId}?ts=1&apikey=${publicKey}&hash=${hash}`
+        const singleComicURL = `https://gateway.marvel.com/v1/public/comics/${characterId}?ts=1&apikey=${publicKey}&hash=${hash}`
         return await fetch(singleComicURL).then(res => res.json())
     }
 

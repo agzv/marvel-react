@@ -50,7 +50,6 @@ export const saveComic = (comicData, token) => {
         axios.post(`https://marvel-react-f1151.firebaseio.com/comics.json?auth=${token}`, comicData)
             .then(response => {
                 dispatch(saveComicSuccess(response.data.name, comicData))
-                console.log(response.data)
             })
             .catch(error => console.log(error))
     }

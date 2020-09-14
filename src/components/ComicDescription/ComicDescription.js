@@ -23,7 +23,6 @@ const ComicDescription = props => {
                 setDescription(res.data.results[0].description)
                 setCreators(res.data.results[0].creators.items)
                 setComicID(res.data.results[0].id)
-                console.log(res.data)
             })
     }, [props.match.params.id])
 

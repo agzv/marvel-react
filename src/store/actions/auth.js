@@ -55,7 +55,6 @@ export const getUserDetails = (token, userId) => {
                     return response.data[userKey]
                 })
                 dispatch(storeUserDetailsSuccess(userDetailsArr))
-                console.log(userDetailsArr)
             })
             .catch(error => console.log(error))
     }
@@ -99,7 +98,6 @@ export const auth = (email, password, fullName=null, isSignUp=false) => {
 
         axios.post(URL, authData)
             .then(response => {
-                console.log(response);
                 const expirationDate = new Date(new Date().getTime() + response.data.expiresIn * 1000)
                 localStorage.setItem('token', response.data.idToken)
                 localStorage.setItem('expirationDate', expirationDate)

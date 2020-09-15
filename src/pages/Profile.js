@@ -19,7 +19,15 @@ class Profile extends Component {
     componentDidMount() {
         this.fetchComics()
         this.fetchCharacters()
-        this.getUserDetails()
+        // this.getUserDetails()
+    }
+
+    shouldComponentUpdate(prevProps, prevState) {
+        if (this.props !== prevProps || this.state !== prevState) {
+            return true
+        } else {
+            return false
+        }
     }
 
     toggleSidebar = () => {
@@ -34,9 +42,9 @@ class Profile extends Component {
         this.props.onFetchCharacters(this.props.token, this.props.userId)
     }
 
-    getUserDetails = () => {
-        this.props.onGetUserDetails(this.props.token, this.props.userId)
-    }
+    // getUserDetails = () => {
+    //     this.props.onGetUserDetails(this.props.token, this.props.userId)
+    // }
 
     // const ingredientSummary = Object.keys(this.props.ingredients).map(igKey => {
     //     return (<li key={igKey}>
@@ -59,6 +67,7 @@ class Profile extends Component {
         ))
 
         let greeting
+        console.log(this.props.fullName)
         if (this.props.fullName !== null) {
             greeting = <h1>Hello, {this.props.fullName}</h1>
         }
@@ -104,7 +113,7 @@ const mapDispathToProps = dispatch => {
     return {
         onFetchComics: (token, userId) => dispatch(actions.fetchComics(token, userId)),
         onFetchCharacters: (token, userId) => dispatch(actions.fetchCharacters(token, userId)),
-        onGetUserDetails: (token, userId) => dispatch(actions.getUserDetails(token, userId))
+        // onGetUserDetails: (token, userId) => dispatch(actions.getUserDetails(token, userId))
     }
 }
 

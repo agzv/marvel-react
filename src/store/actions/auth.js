@@ -39,10 +39,11 @@ export const checkAuthTimeout = expirationDate => {
     }
 }
 
-export const storeUserDetailsSuccess = userDetails => {
+export const storeUserDetailsSuccess = (email, fullName) => {
     return {
         type: actionTypes.SAVE_USER_DETAILS_SUCCESS,
-        userDetails: userDetails
+        email: email,
+        fullName: fullName
     }
 }
 
@@ -54,7 +55,7 @@ export const getUserDetails = (token, userId) => {
                 const userDetailsArr = Object.keys(response.data).map(userKey => {
                     return response.data[userKey]
                 })
-                dispatch(storeUserDetailsSuccess(userDetailsArr))
+                dispatch(storeUserDetailsSuccess(userDetailsArr[0].email, userDetailsArr[0].fullName))
             })
             .catch(error => console.log(error))
     }
@@ -68,19 +69,18 @@ export const storeUserDetails = (email, fullName, userId, token) => {
     }
     
     const URL = `https://marvel-react-f1151.firebaseio.com/users.json`
-    axios.post(`${URL}?auth=${token}`, userData)
-        .then(response => {
-            // const userDetailsArr = Object.keys(response.data).map(userKey => {
-            //     return response.data[userKey]
-            // })
-            // dispatch(storeUserDetailsSuccess(response.data))
-            // console.log(userDetailsArr)
-        })
-        .catch(error => console.log(error))
+    return dispatch => {
+        axios.post(`${URL}?auth=${token}`, userData)
+            .then(response => {
+                console.log(userData)
+                dispatch(storeUserDetailsSuccess(userData.email, userData.fullName))
+            })
+            .catch(error => console.log(error))
+    }
     
 }
 
-export const auth = (email, password, fullName=null, isSignUp=false) => {
+export const auth = (email, password, fullName, isSignUp=false) => {
     return dispath => {
         dispath(authStart())
 

@@ -44,8 +44,8 @@ const authReducer = (state = initialState, action) => {
         case actionTypes.SAVE_USER_DETAILS_SUCCESS:
             return {
                 ...state,
-                email: action.userDetails[0].email,
-                fullName: action.userDetails[0].fullName,
+                email: action.email,
+                fullName: action.fullName
             }
         default:
             return state

@@ -9,9 +9,9 @@ export const handleValidation = (value, fieldName) => {
     }
 
     if (fieldName === 'fullName' && value !== "undefined") {
-        if (!value.match(/^[a-zA-Z]+$/)) {
+        if (!value.match(/^[a-zA-Z ]{2,30}$/)) {
             formIsValid = false;
-            error = "Your name should contain letters only!";
+            error = "Your name should be at least 2 symbols and 30 symbols max!";
         }
     }
 

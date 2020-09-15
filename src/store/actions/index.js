@@ -1,4 +1,4 @@
-export { auth, logout, authCheckState, getUserDetails } from './auth';
+export { auth, logout, authCheckState } from './auth';
 
 export { saveComic, fetchComics } from './comics';
 
